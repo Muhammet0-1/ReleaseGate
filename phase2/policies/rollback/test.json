@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "version": "phase2-rollback-v1",
+  "environment": "test",
+  "imageRepository": "registry.example.invalid/workshop/parcel-note",
+  "approvedDigest": "sha256:7da35d8d71dc40a2c55b7000513f67d861e1a83ac6f5abfe1d8ad124dbc8bd60",
+  "sourceRepository": "git+https://forge.example.invalid/workshop/parcel-note.git",
+  "approvedCommit": "2e3a18cf671482b07e787646f926417f575b6a03",
+  "buildType": "https://build.example.invalid/types/parcel-oci/v1",
+  "builderId": "https://build.example.invalid/builders/parcel/v1",
+  "workflow": "https://build.example.invalid/workflows/parcel-release@c79cc7c72b2197b9b8bd0bb5304dea959fe74a86",
+  "publisherKey": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7AAuxPJnrplub+OlbA/9CrZtAmcX\nxbRc8oQ/5j3wtZH9EP3N+3L15iI1hnhFJ27AokwAz3eddDKPg/znm9JIyg==\n-----END PUBLIC KEY-----\n",
+  "workflowKey": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEW2XJq5UiihpKu6/DIi108AIVQcLl\nNRo98tM5PKyNgDhx4ZRqzuBbYh+inw9sSev9m0BFezjV6IFC+6LqtBl+xQ==\n-----END PUBLIC KEY-----\n"
+}

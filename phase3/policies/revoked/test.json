@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "version": "docker-rollback-v2",
+  "environment": "test",
+  "imageRepository": "registry.example.invalid/workshop/parcel-note",
+  "approvedDigest": "sha256:669bb9556bdddc739f0d6ab504bc8588acaa9afe347f546182c903a7782dbea8",
+  "sourceRepository": "git+https://forge.example.invalid/workshop/parcel-note.git",
+  "approvedCommit": "2e3a18cf671482b07e787646f926417f575b6a03",
+  "buildType": "https://build.example.invalid/types/parcel-oci/v1",
+  "builderId": "https://build.example.invalid/builders/parcel/v1",
+  "workflow": "https://build.example.invalid/workflows/parcel-release@c79cc7c72b2197b9b8bd0bb5304dea959fe74a86",
+  "publisherKey": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWhrOBvkZ5PlbqBETWrSOlueiTccZ\nhqs3tYzhh4AZHchFcKIy61O2IPlza9ZsM/rVkrvLh2RVRYhK4IhkdDSMAQ==\n-----END PUBLIC KEY-----\n",
+  "workflowKey": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEoUHw6Gvrby0JxZuQOk41AI5UebdJ\nZU741oMYYNvNz2vWReFI0axpkf7JNYuatZUSsGwvC0+neRD5fDJoq/+ezw==\n-----END PUBLIC KEY-----\n"
+}

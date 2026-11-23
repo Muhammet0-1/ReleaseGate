@@ -1,0 +1,149 @@
+{
+  "recordedUtcDate": "2026-11-23",
+  "source": "examples/phase3.jsonl",
+  "rehearsalScenarios": 5,
+  "realLocalDockerContainers": 11,
+  "platform": "linux/amd64",
+  "syntheticData": true,
+  "cases": [
+    {
+      "scenario": "promote",
+      "candidateDirectHttp": 200,
+      "decisionCheckHttp": 200,
+      "previousHttpAtReadiness": 200,
+      "sharedHttpAtReadiness": 200,
+      "candidateReason": "READY",
+      "rollbackReason": null,
+      "routeAtDecision": "green",
+      "oldContainerRetained": false,
+      "heldSharedHttp": null,
+      "exitCode": 0,
+      "syntheticRecordsObserved": 2,
+      "observerResidualResources": 0,
+      "sourceLines": {
+        "readinessWindow": 59,
+        "terminal": 97,
+        "observer": 98
+      }
+    },
+    {
+      "scenario": "unhealthy-503",
+      "candidateDirectHttp": 503,
+      "decisionCheckHttp": 503,
+      "previousHttpAtReadiness": 200,
+      "sharedHttpAtReadiness": 200,
+      "candidateReason": "HTTP_503",
+      "rollbackReason": "APPROVED",
+      "routeAtDecision": "blue",
+      "oldContainerRetained": true,
+      "heldSharedHttp": null,
+      "exitCode": 2,
+      "syntheticRecordsObserved": 2,
+      "observerResidualResources": 0,
+      "sourceLines": {
+        "readinessWindow": 157,
+        "terminal": 203,
+        "observer": 204
+      }
+    },
+    {
+      "scenario": "rollback-revoked",
+      "candidateDirectHttp": 503,
+      "decisionCheckHttp": 503,
+      "previousHttpAtReadiness": 200,
+      "sharedHttpAtReadiness": 200,
+      "candidateReason": "HTTP_503",
+      "rollbackReason": "DIGEST_NOT_APPROVED",
+      "routeAtDecision": null,
+      "oldContainerRetained": false,
+      "heldSharedHttp": 503,
+      "exitCode": 3,
+      "syntheticRecordsObserved": 2,
+      "observerResidualResources": 0,
+      "sourceLines": {
+        "readinessWindow": 263,
+        "terminal": 291,
+        "observer": 292
+      }
+    },
+    {
+      "scenario": "wrong-instance-200",
+      "candidateDirectHttp": 200,
+      "decisionCheckHttp": 200,
+      "previousHttpAtReadiness": 200,
+      "sharedHttpAtReadiness": 200,
+      "candidateReason": "WRONG_CONTAINER",
+      "rollbackReason": "APPROVED",
+      "routeAtDecision": "blue",
+      "oldContainerRetained": true,
+      "heldSharedHttp": null,
+      "exitCode": 2,
+      "syntheticRecordsObserved": 2,
+      "observerResidualResources": 0,
+      "sourceLines": {
+        "readinessWindow": 361,
+        "terminal": 409,
+        "observer": 410
+      }
+    },
+    {
+      "scenario": "wrong-image-claim",
+      "candidateDirectHttp": 200,
+      "decisionCheckHttp": 200,
+      "previousHttpAtReadiness": 200,
+      "sharedHttpAtReadiness": 200,
+      "candidateReason": "CONTAINER_IMAGE_MISMATCH",
+      "rollbackReason": "APPROVED",
+      "routeAtDecision": "blue",
+      "oldContainerRetained": true,
+      "heldSharedHttp": null,
+      "exitCode": 2,
+      "syntheticRecordsObserved": 2,
+      "observerResidualResources": 0,
+      "sourceLines": {
+        "readinessWindow": 471,
+        "terminal": 517,
+        "observer": 518
+      }
+    }
+  ],
+  "checks": {
+    "manifestAndExportedConfigBindings": 10,
+    "containerIdentityChecksAtStart": 11,
+    "publicationEvidenceLines": {
+      "binding": [
+        15,
+        22,
+        32,
+        432,
+        470,
+        471
+      ],
+      "promotionDirectAndShared": [
+        70,
+        73,
+        76,
+        79
+      ],
+      "retainedDirectAndShared": [
+        165,
+        176,
+        179,
+        182,
+        185
+      ],
+      "revokedIsolatedRead": [
+        266,
+        267,
+        270,
+        273,
+        292
+      ],
+      "wrongInstance": [
+        361,
+        362,
+        410
+      ]
+    }
+  }
+}

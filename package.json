@@ -1,0 +1,12 @@
+{
+  "name": "release-gate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tek bir OCI imajı için çevrimdışı test ortamı kabul kapısı",
+  "scripts": { "test": "node --test test/gate.test.cjs test/rollout.test.cjs test/docker-gate.test.cjs" },
+  "dependencies": {
+    "@sigstore/bundle": "5.0.0",
+    "@sigstore/verify": "4.1.0"
+  },
+  "devDependencies": { "@sigstore/sign": "5.0.0" }
+}
